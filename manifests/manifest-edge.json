@@ -1,0 +1,77 @@
+{
+    "manifest_version": 3,
+    "name": "Shanna Auth: 2FA Client",
+    "version": "5.1.3",
+    "default_locale": "en",
+    "description": "__MSG_extDesc__",
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "action": {
+        "default_icon": {
+            "19": "images/icon19.png",
+            "38": "images/icon38.png"
+        },
+        "default_title": "__MSG_extShortName__",
+        "default_popup": "view/popup.html"
+    },
+    "commands": {
+        "_execute_action": {},
+        "scan-qr": {
+            "description": "Scan a QR code"
+        },
+        "autofill": {
+            "description": "Autofill the matched code"
+        }
+    },
+    "options_ui": {
+        "page": "view/options.html",
+        "open_in_tab": false
+    },
+    "storage": {
+        "managed_schema": "schema.json"
+    },
+    "oauth2": {
+        "client_id": "920349270714-acgb5ltl0rjfo9q4aghfnbf5429i0suf.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/drive.file"
+        ]
+    },
+    "background": {
+        "service_worker": "dist/background.js"
+    },
+    "sandbox": {
+        "pages": [
+            "view/argon.html"
+        ]
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "identity",
+        "alarms",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://api.github.com/*"
+    ],
+    "optional_permissions": [
+        "clipboardWrite",
+        "contextMenus"
+    ],
+    "optional_host_permissions": [
+        "https://api.github.com/*",
+        "https://www.google.com/",
+        "https://*.dropboxapi.com/*",
+        "https://www.googleapis.com/*",
+        "https://accounts.google.com/o/oauth2/revoke",
+        "https://graph.microsoft.com/me/*",
+        "https://login.microsoftonline.com/common/oauth2/v2.0/token"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; font-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; connect-src https://api.github.com/ https://www.google.com/ https://*.dropboxapi.com https://www.googleapis.com/ https://accounts.google.com/o/oauth2/revoke https://login.microsoftonline.com/common/oauth2/v2.0/token https://graph.microsoft.com/; default-src 'none'",
+        "sandbox": "sandbox allow-scripts; script-src 'self' 'unsafe-eval';"
+    }
+}

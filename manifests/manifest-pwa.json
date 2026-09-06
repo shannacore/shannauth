@@ -1,0 +1,9 @@
+{
+  "scope": "/",
+  "icons": [{
+    "src": "/images/shanna-auth-logo.svg",
+    "type": "image/svg+xml",
+    "sizes": "any",
+    "purpose": "any maskable"
+  }]
+}

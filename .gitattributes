@@ -1,0 +1,4 @@
+*.js linguist-vendored
+*.css linguist-vendored
+_locales/* linguist-generated=true
+_locales/en/messages.json linguist-generated=false
