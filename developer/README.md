@@ -1,7 +1,7 @@
 # SHANNA Authenticator 5.1.3 — Chrome developer subset
 
 Folder source dalam repositori utama: https://github.com/shannacore/shannauth/tree/main/developer
-Folder siap pakai: [`../chrome-ready/`](../chrome-ready/) pada checkout repositori.
+Versi siap pakai berada di [root repositori](https://github.com/shannacore/shannauth), bukan di folder developer.
 Unduhan kedua paket: https://github.com/shannacore/shannauth/releases/latest
 Versi tetap **5.1.3**; tidak perlu repositori terpisah untuk developer.
 
@@ -13,10 +13,10 @@ node_modules, hasil build, source map, data pengguna, atau konfigurasi OAuth asl
 ## Pilih paket yang benar
 
 - `SHANNA-Authenticator-Chrome-5.1.3-developer.zip`: untuk mengubah dan membangun source.
-- `SHANNA-Authenticator-Chrome-5.1.3-ready.zip`: runtime yang sudah dibangun; ekstrak
+- `SHANNA-Authenticator-Chrome-5.1.3.zip`: runtime yang sudah dibangun; ekstrak
   lalu pilih folder berisi `manifest.json` lewat Chrome **Load unpacked**. Tidak perlu npm.
-- Ready adalah salinan persis ZIP rilis lokal lama dengan nama tanpa akhiran `-ready`.
-  Build developer memakai konfigurasi cloud kosong dan **tidak identik byte** dengan ready.
+- Paket runtime asli dipertahankan. Build developer memakai konfigurasi cloud kosong
+  dan **tidak identik byte** dengan paket siap pakai.
 
 ## Build dari ZIP tanpa Git atau Bash
 
@@ -78,7 +78,7 @@ Logika aplikasi lain tidak diubah. ZIP ini sengaja tidak memuat suite Mocha lama
 Pertahankan `LICENSE` (MIT/Authenticator Extension) dan `view/licenses.html`.
 Source memakai dependency lama termasuk Vue 2; keberhasilan build bukan audit keamanan.
 Kedua ZIP tersedia pada Release repositori **shannacore/shannauth** yang sama.
-**Code → Download ZIP** menyediakan folder `chrome-ready/` dan `developer/`.
-Untuk pemasangan tanpa build, pilih `chrome-ready/` atau unduh aset `-ready.zip`.
+**Code → Download ZIP** menyediakan runtime siap pakai di root dan source di `developer/`.
+Untuk pemasangan tanpa build, pilih folder root yang berisi `manifest.json` atau unduh aset `SHANNA-Authenticator-Chrome-5.1.3.zip`.
 ZIP developer hanya berisi isi folder ini; jalankan perintah build dari sini.
 Skrip build dan packaging tetap lokal; tidak ada unggahan otomatis.

@@ -18,7 +18,7 @@ Semua tersedia dalam **satu repositori: shannacore/shannauth**:
 
 | Folder | Kegunaan |
 |---|---|
-| [`chrome-ready/`](chrome-ready/) | Ekstensi siap dipasang lewat Chrome → Load unpacked. Tidak perlu Node.js/npm. |
+| Root repositori (folder utama) | Ekstensi siap dipasang lewat Chrome → Load unpacked. `manifest.json` sudah ada di sini; tidak perlu Node.js/npm. |
 | [`developer/`](developer/) | Source Chrome untuk pengembangan. Jalankan `npm ci --ignore-scripts --no-audit --no-fund`, lalu `npm run build` dari folder ini. |
 
 Nomor versi tetap **5.1.3**. Pemisahan folder tidak mengubah logika OTP, tampilan, atau data aplikasi. Android, website/admin, dan kredensial privat tidak disertakan dalam source developer.
@@ -29,11 +29,11 @@ Paket ini belum diterbitkan di Chrome Web Store. Gunakan **Mode developer → Lo
 
 Buka [halaman Releases](https://github.com/shannacore/shannauth/releases/latest), lalu unduh:
 
-Untuk pengguna: **`SHANNA-Authenticator-Chrome-5.1.3-ready.zip`**.
+Untuk pengguna: **`SHANNA-Authenticator-Chrome-5.1.3.zip`**.
 
 Untuk pengembang: **`SHANNA-Authenticator-Chrome-5.1.3-developer.zip`**.
 
-Paket lama `SHANNA-Authenticator-Chrome-5.1.3.zip` tetap tersedia dan isinya sama dengan paket ready.
+Paket siap pakai yang sudah ada tetap dipertahankan, tanpa salinan folder runtime tambahan.
 
 Pilih file dengan nama tersebut pada bagian **Assets**. Ekstrak seluruh isinya; jangan memilih file ZIP langsung di Chrome.
 
@@ -62,17 +62,19 @@ SHANNA-Authenticator/
 └── LICENSE
 ```
 
-Jika memakai **Code → Download ZIP**, ekstrak arsipnya, lalu pilih **`shannauth-main/chrome-ready/`** di Load unpacked, bukan folder `developer/`.
+Jika memakai **Code → Download ZIP**, ekstrak arsipnya, lalu pilih **`shannauth-main/`** di Load unpacked, bukan folder `developer/`.
 
 ```text
-shannauth-main/
-├── chrome-ready/       ← pilih ini untuk pemasangan baru
-│   └── manifest.json
+shannauth-main/         ← pilih folder utama ini di Load unpacked
+├── manifest.json
+├── dist/
+├── css/
+├── images/
 └── developer/          ← source dan package.json
     └── chrome/         ← muncul setelah npm run build
 ```
 
-File runtime lama di root tetap dipertahankan untuk kompatibilitas instalasi yang sudah memakai folder tersebut. Jangan memindahkan instalasi lama ke `chrome-ready/` tanpa backup terverifikasi: perubahan folder dapat mengubah ID ekstensi.
+Root tetap menjadi satu-satunya lokasi runtime siap pakai dalam repositori. Folder `developer/` hanya untuk source. Untuk update, gunakan folder instalasi dan profil Chrome yang sama; jangan pindah folder atau uninstall tanpa backup terverifikasi.
 
 Source developer memakai konfigurasi cloud kosong; build developer tidak identik byte dengan ready. Google Drive, Dropbox, dan OneDrive pada build developer belum dikonfigurasi dan belum diuji. Lihat [panduan developer](developer/README.md).
 
