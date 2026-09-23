@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="64" viewBox="0 0 220 64" role="img" aria-label="Download for Firefox">
+  <rect width="220" height="64" rx="12" fill="#7c2d8f"/>
+  <circle cx="32" cy="32" r="18" fill="#fff" opacity=".95"/>
+  <path d="M39 19c-7 1-13 6-14 13-1 7 4 12 11 12 5 0 9-3 10-8-2 3-5 4-8 2-4-2-5-7-2-10 1-2 3-3 5-3-1-3-1-4-2-6z" fill="#7c2d8f"/>
+  <text x="60" y="27" fill="#f5d0fe" font-family="Arial,sans-serif" font-size="11">AVAILABLE FOR</text>
+  <text x="60" y="46" fill="#fff" font-family="Arial,sans-serif" font-size="18" font-weight="700">Firefox</text>
+</svg>

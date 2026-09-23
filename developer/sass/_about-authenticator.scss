@@ -1,0 +1,75 @@
+// About card stays separate from OTP controls and respects the selected theme.
+#info .about-page {
+  box-sizing: border-box;
+  padding: 22px 14px 28px;
+  text-align: center;
+  color: var(--auth-text, inherit);
+}
+#info .about-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin: 0 0 14px;
+}
+#info .about-brand img { width: 64px; height: 64px; border-radius: 16px; }
+#info .about-brand h2 {
+  font-size: 21px;
+  line-height: 1.25;
+  letter-spacing: -.55px;
+  margin: 0;
+  color: var(--auth-text, inherit) !important;
+}
+#info .about-brand small {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 1.8px;
+  color: var(--auth-muted, inherit) !important;
+}
+#info .about-version {
+  display: inline-block;
+  padding: 5px 12px;
+  font-size: 11px;
+  border: 1px solid var(--auth-line, currentColor);
+  border-radius: 20px;
+  color: var(--auth-purple, inherit) !important;
+  background: var(--auth-lilac, transparent);
+}
+#info .about-tagline {
+  margin: 14px auto 10px;
+  max-width: 250px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--auth-text, inherit) !important;
+}
+#info .about-description {
+  margin: 0 auto 20px;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 260px;
+  color: var(--auth-muted, inherit) !important;
+}
+#info .about-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+#info .about-links a {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 11px;
+  border: 1px solid var(--auth-line, currentColor);
+  border-radius: 11px;
+  font-size: 11px;
+  text-decoration: none;
+  color: var(--auth-purple, inherit) !important;
+  background: var(--auth-lilac, transparent);
+}
+#info .about-links a:hover { filter: brightness(.95); }
+#info .about-copyright {
+  margin: 26px 0 0;
+  padding: 16px 0 10px;
+  border-top: 1px solid var(--auth-line, currentColor);
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--auth-muted, inherit) !important;
+}
